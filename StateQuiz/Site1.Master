@@ -1,0 +1,34 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="StateQuiz.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="Resources/StyleSheet1.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- NAVBAR -->
+        <nav>
+            <ul class ="navbar">
+                <li class="left" id="register" runat="server"><a href="/pages/LoginRegister.aspx">Register</a></li>
+                <li class="left" id="profile" runat="server"><a href="/pages/Profile.aspx">Profile</a></li>
+                <li class="left" id="logout" runat="server"><asp:LinkButton Text="Logout" OnClick="User_Logout" runat="server" /></li>
+
+                <li class="right" id="home" runat="server"><a href="/pages/Home.aspx">Home</a></li>
+            
+                <%-- <li id="" runat="server"><a href=""></a></li> --%>
+
+                <div class="dot"></div>
+            </ul>
+        </nav>
+
+        <div class ="main">
+            <asp:Literal ID="lit_test" runat="server" />
+
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+    </form>
+</body>
+</html>
